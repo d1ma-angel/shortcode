@@ -1,15 +1,12 @@
 require "parslet"
 require "erb"
 
-# rubocop:disable Lint/HandleExceptions
 begin
   require "haml"
 rescue LoadError; end
 begin
   require "slim"
 rescue LoadError; end
-# rubocop:enable Lint/HandleExceptions
-
 class Shortcode
 
   def process(string, additional_attributes=nil)

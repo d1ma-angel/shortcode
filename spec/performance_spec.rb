@@ -1,6 +1,5 @@
 require "spec_helper"
 require "parslet/rig/rspec"
-require "pp"
 require "benchmark"
 
 # Uncomment to run performace specs

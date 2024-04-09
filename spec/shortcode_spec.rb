@@ -1,6 +1,5 @@
 require "spec_helper"
 require "parslet/rig/rspec"
-require "pp"
 
 describe Shortcode do
   let(:simple_quote)        { load_fixture :simple_quote }

@@ -67,7 +67,7 @@ describe Shortcode::Tag do
     it "uses the file system template when check_config_templates_first is false" do
       configuration.check_config_templates_first = false
 
-      expect(tag.markup).to eq(File.open("spec/support/templates/erb/quote.html.erb").read)
+      expect(tag.markup).to eq(File.read("spec/support/templates/erb/quote.html.erb"))
     end
   end
 end

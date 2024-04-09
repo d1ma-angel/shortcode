@@ -9,8 +9,8 @@ class Shortcode::Parser
     klass_instance.parse(string)
   end
 
-  def open(*args)
-    klass_instance.open(*args)
+  def open(*)
+    klass_instance.open(*)
   end
 
   private

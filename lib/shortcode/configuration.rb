@@ -20,12 +20,14 @@ class Shortcode::Configuration
 
   # Set the supported block_tags
   attr_reader :block_tags
+
   def block_tags=(block_tags)
     @block_tags = block_tags.sort_by(&:length).reverse
   end
 
   # Set the supported self_closing_tags
   attr_reader :self_closing_tags
+
   def self_closing_tags=(self_closing_tags)
     @self_closing_tags = self_closing_tags.sort_by(&:length).reverse
   end

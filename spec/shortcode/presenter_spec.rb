@@ -1,6 +1,5 @@
 require "spec_helper"
 require "parslet/rig/rspec"
-require "pp"
 
 require "support/presenters/my_presenter"
 require "support/presenters/other_presenter"

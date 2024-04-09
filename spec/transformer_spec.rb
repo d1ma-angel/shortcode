@@ -1,6 +1,5 @@
 require "spec_helper"
 require "parslet/rig/rspec"
-require "pp"
 
 describe Shortcode do
   let(:configuration) {

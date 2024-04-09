@@ -26,20 +26,18 @@ class Shortcode::Tag
 
   attr_reader :configuration
 
-  # rubocop:disable Metrics/AbcSize
   def render_template
     case configuration.template_parser
     when :erb
       ERB.new(markup).result(@binding.expose_binding)
     when :haml
-      Haml::Engine.new(markup).render(@binding)
+      Haml::Template.new { markup }.render(@binding)
     when :slim
       Slim::Template.new { markup }.render(@binding)
     else
       raise Shortcode::TemplateParserNotSupported, configuration.template_parser
     end
   end
-  # rubocop:enable Metrics/AbcSize
 
   def first_priority_template
     configuration.check_config_templates_first ? markup_from_config : markup_from_file

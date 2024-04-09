@@ -30,9 +30,7 @@ class Shortcode::Presenter
     initialize_custom_presenter(name)
   end
 
-  attr_reader :content
-
-  attr_reader :attributes
+  attr_reader :content, :attributes
 
   private
 
